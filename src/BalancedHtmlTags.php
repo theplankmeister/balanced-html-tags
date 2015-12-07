@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of the BalancedHtmlTagsTest package.
+ *
+ * (c) The Plankmeister <plankmeister@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE file that was distributed with this source
+ * code.
+ */
+
 namespace BalancedHtmlTags;
 
 /**
@@ -49,7 +58,7 @@ class BalancedHtmlTags
      * @param string $text Text to be balanced.
      * @return string Balanced text.
      */
-    protected function _balanceTags( $text ) {
+    protected static function _balanceTags( $text ) {
         $tagstack = array(); $stacksize = 0; $tagqueue = ''; $newtext = '';
         $single_tags = array('area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'keygen', 'link', 'meta',
             'param', 'source', 'track', 'wbr'); //Known single-entity/self-closing tags
